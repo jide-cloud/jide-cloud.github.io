@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061922">
+  <meta name="description" content="Coralith is exploring biological AI and computational intelligence for individual biology, grounded in scientific rigor and responsible data governance.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Coralith — Computational Intelligence for Individual Biology">
+  <meta property="og:description" content="Biological AI research exploring computational representations of individual biology, with scientific rigor and responsible data governance.">
+  <meta property="og:url" content="https://coralith.org/">
+  <title>Coralith — Computational Intelligence for Individual Biology</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23061922'/%3E%3Cpath d='M32 49V16M32 32 18 22M32 38l16-16M32 26l7-9M32 42l-14-6' fill='none' stroke='%2399e5d5' stroke-width='3.5' stroke-linecap='round'/%3E%3Ccircle cx='18' cy='22' r='4' fill='%23eea98c'/%3E%3Ccircle cx='48' cy='22' r='4' fill='%2399e5d5'/%3E%3Ccircle cx='39' cy='17' r='3' fill='%23eea98c'/%3E%3Ccircle cx='18' cy='36' r='3' fill='%2399e5d5'/%3E%3C/svg%3E">
+  <style>
+    :root { color-scheme: dark; --navy:#061922; --deep:#04131a; --ink:#eff7f5; --muted:#a6bdbd; --sea:#a0e9d7; --coral:#eeaa91; --line:rgba(201,232,223,.15); }
+    * {box-sizing:border-box}
+    html {scroll-behavior:smooth}
+    body {margin:0; min-height:100vh; background:var(--navy); color:var(--ink); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased}
+    a {color:inherit}
+    .site {position:relative; min-height:100vh; overflow:hidden; isolation:isolate; background:radial-gradient(ellipse 55% 72% at 75% 45%,rgba(28,112,111,.19),transparent 74%), radial-gradient(ellipse 50% 50% at -12% 98%,rgba(26,74,84,.24),transparent 70%),linear-gradient(125deg,#071a24 0%,#061821 62%,#04131a 100%)}
+    .site:before {content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;background-image:linear-gradient(to right,rgba(194,226,217,.035) 1px, transparent 1px),linear-gradient(to bottom,rgba(194,226,217,.035) 1px,transparent 1px);background-size:104px 104px;mask-image:linear-gradient(to right,transparent 4%,#000 50%,#000 96%)}
+    .wrap {max-width:1216px;margin:0 auto;padding:0 52px}
+    header {height:112px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand {display:inline-flex;align-items:center;gap:15px;text-decoration:none}
+    .brand-name {font-size:19px;letter-spacing:.31em;font-weight:600;line-height:1}
+    .brand-mark {height:38px;width:38px;flex:none}
+    .header-note {font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#a7bfbe;display:flex;align-items:center;gap:9px;white-space:nowrap}
+    .header-stage {color:#819c9e}
+    .status-dot {width:7px;height:7px;border-radius:50%;background:var(--sea);box-shadow:0 0 15px rgba(147,229,212,.8)}
+    main {display:grid;grid-template-columns:minmax(0,1.07fr) minmax(0,.93fr);align-items:center;min-height:580px;padding:80px 0 76px;gap:15px}
+    .eyebrow {display:flex;align-items:center;gap:14px;letter-spacing:.21em;text-transform:uppercase;font-size:11px;font-weight:650;color:var(--sea);margin:0 0 28px}
+    .eyebrow:before {content:"";width:31px;height:1px;background:var(--sea)}
+    h1 {font-family:"Iowan Old Style","Baskerville","Palatino Linotype","Book Antiqua",Georgia,serif;font-weight:400;font-size:clamp(3.5rem,5.6vw,5.65rem);line-height:1.075;letter-spacing:-.044em;margin:0 0 29px;max-width:740px}
+    h1 em {font-weight:400;font-style:normal;color:var(--sea)}
+    .intro {font-size:16px;line-height:1.9;color:var(--muted);max-width:530px;margin:0 0 15px}
+    .trust-line {font-size:13px;line-height:1.7;color:var(--sea);max-width:530px;margin:0 0 36px}
+    .cta {display:inline-flex;gap:19px;align-items:center;justify-content:space-between;text-decoration:none;border:1px solid rgba(160,233,215,.61);background:rgba(160,233,215,.075);color:var(--sea);min-width:248px;padding:16px 19px 16px 22px;font-size:12px;letter-spacing:.085em;font-weight:650;transition:background .2s,border .2s,transform .2s}
+    .cta:hover,.cta:focus-visible {background:rgba(160,233,215,.16);border-color:var(--sea);transform:translateY(-2px)}
+    .cta svg {width:20px;height:20px}
+    .art {min-width:0;position:relative;margin-left:-6%;margin-right:-18%;}
+    .art svg {width:100%;height:auto;max-width:680px;display:block;filter:drop-shadow(0 0 35px rgba(71,196,176,.07))}
+    footer {display:flex;justify-content:space-between;gap:16px;padding:25px 0 29px;border-top:1px solid var(--line);color:#7e999a;font-size:11px;line-height:1.6}
+    footer a {color:#b5cac8;text-decoration:none;border-bottom:1px solid rgba(181,202,200,.4)}
+    footer a:hover{color:var(--sea)}
+    @media(max-width:900px){.wrap{padding:0 28px}header{height:88px}main{grid-template-columns:1fr;gap:10px;padding:62px 0 45px}.art{grid-row:2;margin:0 auto;max-width:520px;width:100%}h1{max-width:680px;font-size:clamp(3.5rem,9vw,5rem)}}
+    @media(max-width:580px){.wrap{padding:0 23px}.brand-name{font-size:17px;letter-spacing:.25em}.brand-mark{width:32px;height:32px}.header-note{font-size:9px;letter-spacing:.06em;gap:8px}main{padding:56px 0 30px}h1{font-size:clamp(3.35rem,14vw,4.35rem)}.intro{font-size:15px;line-height:1.77}.art{width:112%;margin-left:-6%;margin-top:10px;margin-bottom:-8px}.header-stage{display:none}.trust-line{font-size:12px;line-height:1.75}footer{flex-direction:column;padding:20px 0 30px}}
+    @media(prefers-reduced-motion:no-preference){.pulse{transform-origin:center;animation:breathe 6s ease-in-out infinite alternate}.pulse:nth-child(even){animation-delay:-3s}@keyframes breathe{from{opacity:.3}to{opacity:.9}}}
+  </style>
+</head>
+<body>
+<div class="site">
+  <div class="wrap">
+    <header>
+      <a class="brand" href="./" aria-label="Coralith home">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24 40V8m0 18L11 15m13 18 13-19M24 19l7-11M24 33l-13-4" stroke="#a0e9d7" stroke-width="2.3" stroke-linecap="round"/>
+          <circle cx="11" cy="15" r="3.5" fill="#eeaa91"/><circle cx="37" cy="14" r="3" fill="#a0e9d7"/><circle cx="31" cy="8" r="2.8" fill="#eeaa91"/><circle cx="11" cy="29" r="2.8" fill="#a0e9d7"/>
+        </svg>
+        <span class="brand-name">CORALITH</span>
+      </a>
+      <div class="header-note"><span class="status-dot"></span><span>Biological AI</span><span class="header-stage">· In development</span></div>
+    </header>
+    <main>
+      <section aria-labelledby="main-heading">
+        <p class="eyebrow">Building the biological foundation</p>
+        <h1 id="main-heading">Computational intelligence for <em>individual biology.</em></h1>
+        <p class="intro">Human biology is deeply individual. Coralith is exploring computational representations that connect biological variation and longitudinal context.</p>
+        <p class="trust-line">Scientific rigor and responsible data governance are foundational to our approach.</p>
+        <a class="cta" href="mailto:info@coralith.org?subject=Coralith%20%E2%80%94%20Inquiry"><span>START A CONVERSATION</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
+      </section>
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 660 630" fill="none">
+          <defs>
+            <radialGradient id="ocean" cx="0" cy="0" r="1" gradientTransform="translate(338 325) rotate(90) scale(290)"><stop stop-color="#319A95" stop-opacity=".23"/><stop offset="1" stop-color="#143D4D" stop-opacity="0"/></radialGradient>
+            <linearGradient id="branch" x1="100" y1="580" x2="580" y2="85" gradientUnits="userSpaceOnUse"><stop stop-color="#548DA1" stop-opacity=".18"/><stop offset=".5" stop-color="#A0E9D7" stop-opacity=".8"/><stop offset="1" stop-color="#EEAA91" stop-opacity=".35"/></linearGradient>
+          </defs>
+          <circle cx="330" cy="315" r="285" fill="url(#ocean)"/>
+          <g stroke="#A0E9D7" stroke-opacity=".13" stroke-width="1">
+            <circle cx="330" cy="315" r="107"/><circle cx="330" cy="315" r="177"/><circle cx="330" cy="315" r="249"/>
+            <path d="M330 40v550M56 315h549M136 121l389 389M524 121 136 510" stroke-opacity=".06"/>
+            <ellipse cx="330" cy="315" rx="245" ry="104" transform="rotate(-38 330 315)"/>
+            <ellipse cx="330" cy="315" rx="232" ry="126" transform="rotate(42 330 315)"/>
+          </g>
+          <g stroke="url(#branch)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M329 545 330 468 310 415 326 372 304 330 323 286 308 255 332 211 340 150 353 106"/>
+            <path d="M310 415 255 432 214 412 167 429 127 404M255 432l-26 48-36 14M214 412l-36-42-39-4"/>
+            <path d="M326 372 379 392 431 369 473 398 517 375M431 369l19-48 43-24M473 398l29 43 42 7"/>
+            <path d="M304 330 248 317 206 279 159 272 125 229M206 279l-18 44-46 14M248 317l-19-51-21-24"/>
+            <path d="M323 286 383 273 415 226 461 220 492 184M415 226l14-47 45-23M383 273l51 22 43 2"/>
+            <path d="M332 211 293 176 279 139 249 115M293 176l-49 12-33-20M340 150l51-16 16-39"/>
+            <path d="M330 468l43 34 31 5M330 468l-48 37-47-4M353 106l-31-44"/>
+          </g>
+          <g fill="#A0E9D7">
+            <circle cx="329" cy="545" r="3.4"/><circle cx="330" cy="468" r="4"/><circle cx="310" cy="415" r="3"/><circle cx="326" cy="372" r="4"/><circle cx="304" cy="330" r="4"/><circle cx="323" cy="286" r="4.6"/><circle cx="332" cy="211" r="3.5"/><circle cx="340" cy="150" r="3"/><circle cx="353" cy="106" r="4"/>
+            <circle cx="255" cy="432" r="3"/><circle cx="214" cy="412" r="4"/><circle cx="167" cy="429" r="3"/><circle cx="127" cy="404" r="3"/><circle cx="229" cy="480" r="2.4"/><circle cx="193" cy="494" r="3"/><circle cx="178" cy="370" r="2.8"/><circle cx="139" cy="366" r="2.7"/>
+            <circle cx="379" cy="392" r="3"/><circle cx="431" cy="369" r="3.5"/><circle cx="473" cy="398" r="3.4"/><circle cx="517" cy="375" r="3.1"/><circle cx="450" cy="321" r="2.6"/><circle cx="493" cy="297" r="3"/><circle cx="502" cy="441" r="3.1"/><circle cx="544" cy="448" r="2.8"/>
+            <circle cx="248" cy="317" r="3.5"/><circle cx="206" cy="279" r="4"/><circle cx="159" cy="272" r="3.2"/><circle cx="125" cy="229" r="3"/><circle cx="188" cy="323" r="3"/><circle cx="142" cy="337" r="2.5"/><circle cx="229" cy="266" r="3"/><circle cx="208" cy="242" r="2.5"/>
+            <circle cx="383" cy="273" r="4"/><circle cx="415" cy="226" r="4"/><circle cx="461" cy="220" r="3.2"/><circle cx="492" cy="184" r="3"/><circle cx="429" cy="179" r="2.5"/><circle cx="474" cy="156" r="2.7"/><circle cx="434" cy="295" r="3.3"/><circle cx="477" cy="297" r="3"/>
+            <circle cx="293" cy="176" r="3"/><circle cx="279" cy="139" r="3.2"/><circle cx="249" cy="115" r="2.7"/><circle cx="244" cy="188" r="2.8"/><circle cx="211" cy="168" r="2.6"/><circle cx="391" cy="134" r="2.6"/><circle cx="407" cy="95" r="2.7"/><circle cx="404" cy="507" r="2.7"/><circle cx="282" cy="505" r="3"/><circle cx="235" cy="501" r="2.5"/><circle cx="322" cy="62" r="3"/>
+          </g>
+          <g fill="#EEAA91">
+            <circle class="pulse" cx="167" cy="429" r="5.2"/><circle class="pulse" cx="461" cy="220" r="5"/><circle class="pulse" cx="249" cy="115" r="4"/><circle class="pulse" cx="517" cy="375" r="4.5"/><circle class="pulse" cx="125" cy="229" r="4.2"/>
+          </g>
+          <g fill="#A0E9D7" opacity=".24">
+            <circle cx="529" cy="142" r="2"/><circle cx="105" cy="173" r="2.3"/><circle cx="556" cy="261" r="1.8"/><circle cx="84" cy="359" r="1.6"/><circle cx="430" cy="81" r="2"/><circle cx="209" cy="99" r="1.8"/><circle cx="584" cy="378" r="2.1"/><circle cx="272" cy="553" r="2.2"/><circle cx="390" cy="565" r="1.5"/>
+          </g>
+        </svg>
+      </div>
+    </main>
+    <footer><span>© 2026 Coralith. An early-stage research initiative.</span><span>Scientific collaborations and inquiries &nbsp; <a href="mailto:info@coralith.org">info@coralith.org</a></span></footer>
+  </div>
+</div>
+</body>
+</html>
